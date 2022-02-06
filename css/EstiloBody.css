@@ -1,0 +1,758 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: 0;
+	font-family: 'Barlow Condensed', sans-serif;
+	font-weight:  300;
+}
+
+body{
+	background-image: linear-gradient(to bottom, #ffffff, #f8f6f7, #f2eced, #eae3e0, #e0dbd4);
+	
+	}
+	.contenedorCarga{
+	  background-color: #BE2872;
+	  position: fixed;
+	  width: 100vw;
+	  height: 100vh;
+	  z-index: 9999;
+	  transition: all 2.0s;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;	
+	}
+	.carga{
+		position: relative;
+	}
+	.carga::after{
+		content: "";
+		width: 100px;
+		height: 100px;
+		background: rgb(255, 241, 241);
+		border: 2px solid rgb(82, 81, 81);
+		animation: girar .5s linear infinite;
+		position: absolute;
+		top: 0;
+		left: -50px;
+		border-radius: 15px;
+		box-shadow: 0 0 5px rgba(7,0,0,0.7);
+	}
+	.carga::before{
+		content: "";
+		width: 100px;
+		height: 20px;
+		background-color: rgba(7,0,0,0.4);
+		animation: sombra_animada .5s linear infinite;
+		position: absolute;
+		top: 115px;
+		left: -45px;
+		border-radius:50%;
+	}
+
+	@keyframes girar {
+		17%{
+			border-bottom-right-radius: 9px;
+		}
+		25%{
+			transform: translateY(9px) rotate(22.5deg);
+		}
+		50%{
+			transform: scale(1, 0.9) translateY(18px) rotate(45deg);
+			border-bottom-right-radius: 70px;
+		}
+		75%{
+			transform: translateY(9px) rotate(67.5deg);
+		}
+		100%{
+			transform: translateY(0) rotate(90deg);
+		}
+	}
+	@keyframes sombra_animada {
+		50%{
+			transform: scale(1.3, 1);
+		}
+	}
+section .Contenedor{
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.img1{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+ .CrisAndre{
+	position: absolute;
+	display: flex;
+	top: 40%;
+	width: 100%;
+	margin: auto;
+	
+}
+ h1{
+	position: relative;
+    color: #be005f;
+	/*background linear-gradient: 
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	*/
+	font-size: 120px;
+	text-align: center;
+	cursor: pointer;
+	margin: auto;
+	font-weight: bold;
+}
+
+.nosCasamos{
+	position: absolute;
+	display: flex;
+	width: 100%;
+	top: 55%;
+}
+h2{
+	color: #ffa835;
+	position: relative;
+	font-size: 40px;
+	text-align: center;
+	margin: auto;
+	margin-top: 10px;
+	font-weight: bold;
+}
+h2::selection{
+	background: #b88bd1 ;
+}
+.flecha{
+	display: flex;
+	position: absolute;
+	justify-content: center;
+    width: 100%;
+	top: 65%;
+}
+
+.irAbajo{
+	animation: animacion 4s infinite ease-in;
+	cursor: pointer;
+		color: #ffa835;
+}
+@keyframes animacion{
+	0%, 20%, 50%, 80%, 100% {
+		transform: translateY(0);
+	  }
+
+	  20%{
+		  transform: translateY(-20px);
+	  }
+
+	  60%{
+		  transform: translateY(-20px);
+	  }
+	  80% {
+		transform: translateY(-20px);
+	  }
+}
+@media (max-width: 1400px){
+	h1{
+		font-size: 100px;
+		margin: auto;
+		
+	}
+}
+@media (max-width: 1170px){
+	h1{
+		font-size: 100px;
+		margin: auto;
+		
+
+	}
+}
+@media (max-width: 700px){
+	h1{
+		font-size: 80px;
+		margin: auto;
+		
+
+	}
+}
+@media (max-width: 586px){
+	h1{
+		font-size: 70px;
+		margin: auto;
+		
+	}
+	.CrisAndre{
+		top: 44%;
+	}
+}
+@media (max-width: 422px){
+	h1{
+		font-size: 62px;
+		margin: auto;
+	}
+	h2{
+		font-size: 21px;
+		margin-top: 25px;
+	}
+	.CrisAndre{
+		top: 50%;
+	}
+}
+@media (max-width:370px){
+	h1{
+		font-size: 54px;
+	}
+	h2{
+		margin-top:30px;
+	}
+}
+
+.Countdown{
+	position: absolute;
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	top: 75%;
+}
+.Countdown div{
+	display: grid;
+	place-items: center;
+	padding: 20px;
+	margin: 8px;
+}
+p{
+	width: 120px;
+	height: 120px;
+	display: grid;
+	place-items: center;
+	color: #FCBB67;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+span{
+	display: block;
+	padding: 5px;
+	text-align: center;
+	color: #d49c00;
+	font-size: 25px;
+	font-weight: bold;
+}
+@media (max-width: 650px){
+	.Countdown{
+		width: 100%;
+		top: 80%;
+	}
+  .Countdown p{
+  	width: 50px;
+  	height: 50px;
+  }
+  .Countdown span{
+  	width: 50px;
+  	height: 40px;
+  	font-size: 15px;
+  }
+}
+@media (max-width: 420px){
+
+	.Countdown{
+		width: 100%;
+		top: 80%;
+		left: -15px;
+	}
+  .Countdown p{
+  	width: 22px;
+  	height: 50px;
+  }
+  .Countdown span{
+  	width: 22px;
+  	height: 22px;
+  	font-size: 15px;
+  	margin-top: 15px;
+  }
+}
+@media (max-width: 310px){
+	.Countdown{
+		width: 80%;
+		top: 85%;
+		left: 10px;
+	}
+  .Countdown p{
+  	width: 12px;
+  	height: 22px;
+  }
+  .Countdown span{
+  	width: 20px;
+  	height: 20px;
+  	font-size: 12px;
+  	margin-top: 25px;
+  }
+}
+
+.informacion{
+	display: flex;
+	justify-content: center;
+    
+}
+
+.icono-contenedor{
+  width: 50%;
+  text-align: center;
+  display: block;
+  margin: auto;
+  float: left;
+}
+.icono1{
+	width:64px;
+	height:64px;
+	position: relative;
+	top: 10%;
+	margin-top: 100px;
+}
+
+.h3-1{
+	background: #473000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #473000, #b48445); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #473000, #b97c2c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	font-size: 45px;
+	margin-top:80px;
+}
+.h3-2{
+	background: #473000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #473000, #b48445); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #473000, #b97c2c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	font-size: 45px;
+	margin-top:20px;
+}
+h3{
+	background: #473000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #473000, #b48445); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #473000, #b97c2c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	font-size: 45px;
+	margin-top:80px;
+	
+}
+
+h4{
+	font-size: 24px;
+	text-align: center;
+	color: #3d383b;
+	
+}
+
+h5{
+	font-size: 45px;
+	background: #473000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #473000, #fcbb67); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #473000, #fcbb67); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	height: 65px;
+	margin-bottom: 15px;
+}
+.Confirmar{
+	display: inline-block;
+	font-size:40px;
+	font-weight: bold;
+	color: #b48445;
+}
+
+.icono2{
+	width:64px;
+	height:64px;
+	position: relative;
+	left:0;
+	top: 10%;
+	margin-top: 100px;
+}
+.iglesia-contenedor{
+	display: block;
+	text-align: center;
+	width: 50%;
+	float: right;
+	margin: auto;
+  }
+  button{
+	border: none;
+	width: 130px;
+	height: 50px;
+	margin-top: 30px;
+	background-color: #b48445;
+	color: #fff;
+	cursor: pointer;
+	font-size: 22px;
+	border-radius: 5px;
+}
+.icono3{
+	width:64px;
+	height:64px;
+	position: relative;
+	left:0;
+	
+	
+}
+
+
+.icono5{
+	width:64px;
+	height: 64px;
+	position: relative;
+	margin-top:  20px;
+	
+}
+
+.icono7{
+	width:70px;
+	height:70px;
+	position: relative;
+	margin-top:  20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	
+}
+  .info-contenedor{
+	  display: inline-block;
+	  width: 100%;
+	  height:50px;
+	  text-align: center;
+	  margin-top: 40px;
+  }
+  h6{ 
+	  font-size: 31px;
+      margin-top: 80px;	
+	  cursor: pointer;
+  }
+ 
+  
+.fotos{
+	width: 100%;
+	height: 150px;
+	text-align: center;
+    
+  }
+.slide-contenedor{
+	height: 690px;
+	width: 80%;
+	position: relative;
+	overflow-y: hidden;
+	margin: auto;
+	border: 5px solid #575055;
+	border-radius: 5px;
+	box-shadow: 0px 14px 15px -5px rgba(7,0,0,0.73);
+    -webkit-box-shadow: 0px 18px 15px -5px rgba(7,0,0,0.73);
+    -moz-box-shadow: 0px 18px 15px -5px rgba(7,0,0,0.73);
+}
+.miSlider{
+	display: none;
+	transition: 2s;
+	max-height: 100vh;
+}
+
+.miSlider img{
+	width: 100%;
+	height: 690px;
+	object-fit: cover;
+	vertical-align: bottom;
+	transition: 2s;
+}
+.direcciones{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	font-size:35px;
+    
+}
+.direcciones a{
+	color: #fadbc6;
+	display: inline-block;
+	padding: 25px;
+	text-decoration: none;
+}
+.direcciones a:hover{
+	background: #a781a4;
+	transition: .5s;
+	border-radius: 7px;
+}
+.barras{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  margin-bottom: 15px;
+}
+
+.barra{
+	cursor: pointer;
+	height: 10px;
+	width: 10px;
+	margin: 0 5px;
+	background: #8a8489;
+	display: inline-block;
+	margin-left: 6px;
+	border-radius:50%;
+}
+.active{
+	background-color: #af5b85;
+}
+
+.fade{
+	animation: fade;
+	animation-duration: 1.5s;
+}
+@keyframes fade {
+	from {opacity: .4;}
+	to{opacity: 1;}
+}
+.darRegalos{
+	display: flex;
+	margin-top: 80px;
+	height:800px;
+	width: 100%;
+	background-image: url(../img/flower-ge5c357631_1920.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
+.regalos{
+	margin: auto ;
+	width: 70%;
+	height: 500px;
+	text-align: center;
+    background: rgba(158, 158, 158, 0.479);
+    border-radius: 5px;
+	
+}
+.icono4{
+	width:64px;
+	height:64px;
+	position: relative;
+	margin-top:  10px;
+	
+}
+
+
+.cuentaBancaria{
+	width: 100%;
+	height: 200px;
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	justify-content: center;
+	
+}
+
+.infoP{
+  font-size:35px;
+  width: 100%;
+  color: #3d383b;
+  display: block;
+  justify-content:center;
+  margin-top: 30px;
+}
+.VerDatos{
+	display: inline-block;
+	width: 220px;
+	height: 80px;
+	font-size: 30px;
+	cursor: pointer;
+	margin-top: 30px;
+}
+.VerDatos1{
+	color: #b48445;
+	font-weight: bold;
+}
+
+
+.Asistencia{
+	
+	display: flex;
+	
+	width: 100%;
+	margin: auto;
+    justify-content: center;
+}
+.contenedor-Info{
+	display: flex;
+	justify-content: center;
+	
+    width: 100%;
+    margin: auto;
+	top:  70%;
+	
+}
+.pAsistencia{
+	font-size:35px;
+	
+	width: 100%;
+	color: #3d383b;
+	display: flex;
+	top: 40%;
+	justify-content:center;
+}
+.contenedor-wpp{
+	
+	display: block;
+	justify-content: center;
+	
+}
+.wppAsistencia{
+	width: 220px;
+	height: 80px;
+	font-size: 25px;
+}
+.contenido-caja{
+	display: flex;
+	justify-content:center;
+	width:  100%;
+	height: 120px;
+
+}
+
+button:hover{
+	background-color: #5a3a10;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+.fondoPintura{
+  width: 100%;  
+}
+.img3{
+	width: 100%;
+	
+	object-fit: cover;
+}
+
+@media (max-width: 1420px) {
+    .h3-1{
+        font-size: 40px;
+    }
+   }
+   @media (max-width: 1262px) {
+       .h3-1{
+           font-size: 38px;
+       }
+      }
+      @media (max-width: 1200px) {
+       .h3-1{
+           font-size: 34px;
+       }
+      }
+      @media (max-width: 1077px) {
+       .h3-1{
+           font-size: 30px;
+           text-align: center;
+       }
+      }
+      @media (max-width: 950px) {
+       .h3-1{
+           font-size: 28px;
+           text-align: center;
+       }
+       .pAsistencia{
+           font-size:30px;
+       }
+      }
+      @media (max-width:838px){
+          .infoP{
+              font-size:  28px;
+          }
+      }
+      @media (max-width: 825px) {
+       .h3-1{
+           font-size: 28px;
+           text-align: center;
+       }
+       .pAsistencia{
+           font-size:28px;
+           text-align: center;
+       }
+      }
+      @media (max-width: 700px) {
+       .h3-1{
+           font-size: 28px;
+           text-align: center;
+       }
+       .pAsistencia{
+           font-size:28px;
+           text-align: center;
+       }
+       h6{
+           font-size: 25px;
+       }
+      }
+      @media (max-width: 570px) {
+       .h3-1{
+           font-size: 24px;
+           text-align: center;
+       }
+       .pAsistencia{
+           font-size:28px;
+           text-align: center;
+       }
+      }
+      @media (max-width:537px){
+          h5{
+              font-size: 30px;
+          }
+          h4{
+              font-size: 20px;
+          }
+      }
+      @media (max-width:528px){
+       .pAsistencia{
+           font-size:28px;
+           text-align: center;
+       }
+      }
+      @media (max-width: 475px) {
+       .h3-1{
+           font-size: 24px;
+           text-align: center;
+       }
+       .pAsistencia{
+           font-size:28px;
+           text-align: center;
+       }
+      }
+      @media (max-width: 439px) {
+       .h3-1{
+           font-size: 24px;
+           text-align: center;
+       }
+      }
+      @media (max-width: 420px) {
+       .h3-2{
+           font-size: 28px;
+           text-align: center;
+       }
+       h3{
+           font-size: 33px;
+           text-align: center;
+       }
+      }

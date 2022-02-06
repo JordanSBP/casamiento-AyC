@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="css/EstiloBody.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<main>
+		<div class="contenedorCarga">
+            <div  class="carga"></div>
+		</div>
+		<section class="Contenedor">
+			  <img class="img1" src="img/FondoImagen.jpeg">
+			<div data-aos="fade-down" data-aos-duration="1000" class="CrisAndre">
+				<h1>ANDRE Y CRIS</h1>
+				
+
+			</div>
+		    <div data-aos="fade-up"data-aos-duration="2500" class="nosCasamos">
+				<h2>¡Nos casamos!</h2>
+			</div>
+		    <div class="flecha">
+		        <span class="irAbajo"> ▼ </span>
+			</div>
+			<div class="Countdown">
+				<div>
+					<p id="Days">00</p>
+					<span>Dias</span>
+				</div>
+				<div>
+					<p id="Hours">00</p>
+					<span>Horas</span>
+				</div>
+				<div>
+					<p id="Minutes">00</p>
+					<span>Minutos</span>
+				</div>
+				<div>
+					<p id="Seconds">00</p>
+					<span>Segundos</span>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="InfoBoda">
+
+			<div data-aos="fade-up"data-aos-duration="1600"  class="informacion">
+				<h3 class="h3-1">"Nuestros destinos estaban escritos y por fin ha llegado el momento de compartirlos con ustedes"</h3>
+				
+			</div>
+			<div data-aos="fade-up"data-aos-duration="2100" class="icono-contenedor">
+				<img class="icono1" src="https://img.icons8.com/material/64/000000/wedding-rings.png"/>
+				<h5>CEREMONIA Y FIESTA</h5>
+				<h4>Apuap - Los Molinos</h4>
+				<h4><b>19/02/2022</b></h4>
+				<h4> <b>22hs</b> </h4>
+				<br>
+				<h4>Av. el tribuno</h4>
+				<h4>Los Molinos</h4>
+				<h4>San Salvador de Jujuy</h4>
+				<button><a href="https://shortest.link/2Mhk" target="_blank" rel="noopener noreferrer">Como llegar</a></button>
+			</div>
+			<div data-aos="fade-up"data-aos-duration="2100" class="iglesia-contenedor">
+				<img class="icono2" src="https://img.icons8.com/material/50/000000/church.png"/>
+				<h5>IGLESIA</h5>
+				<h4>Sagrada Familia</h4>
+				<h4><b>19/02/2022</b></h4>
+				<h4> <b>20:30hs</b> </h4>
+				<br>
+				<h4>Av. España 1620</h4>
+				<h4>San Salvador de Jujuy</h4>
+				<h4>Jujuy</h4>
+				<button><a href="https://shortest.link/2Mhx" target="_blank" rel="noopener noreferrer">Como llegar</a></button>
+			</div>
+
+			<div data-aos="fade-up"data-aos-duration="2200" class="info-contenedor">
+				
+                <h5>VESTIMENTA</h5>
+				<h4 style="font-size:33px" style="font-weight:bold">Media gala</h4>
+				<div class="iconosJuntos">
+					<img class="icono7" src="https://img.icons8.com/ios-filled/100/000000/suit.png"/>
+					<img class="icono7" src="https://img.icons8.com/ios-filled/50/000000/wedding-dress.png"/>
+				</div>
+				
+				<h6>No olvides <span class="Confirmar" color="#b48445">confirmar</span> tu presencia a la boda al final de la invitacion.</h6>
+			</div>
+		</section>
+
+
+        
+
+
+		<section class="galeriaDeFotos">
+           <div data-aos="fade-up"data-aos-duration="2200" class="fotos">
+			   <h3>Nuestros momentos</h3>
+			   <img class="icono3" src="https://img.icons8.com/glyph-neue/64/000000/sakura.png"/> 
+		   </div>
+
+		   <div data-aos="fade-up"data-aos-duration="2200" class="slide-contenedor">
+               <div class="miSlider fade">
+				   <img src="img/salider2.jpeg" >
+			   </div>
+			   <div class="miSlider fade">
+				<img src="img/slider.jpeg" >
+			</div>
+			<div class="miSlider fade">
+				<img src="img/slider3.jpeg" >
+			</div>
+			<div class="miSlider">
+				<img src="img/slider4.jpeg" >
+			</div>
+			
+
+            <div class="barras">
+				<span  class="barra active" onclick="posicionSlide(1)"></span>
+				<span  class="barra" onclick="posicionSlide(2)"></span>
+				<span  class="barra" onclick="posicionSlide(3)"></span>
+				<span  class="barra" onclick="posicionSlide(4)"></span>
+			  </div>
+		  
+
+		   </div>
+            
+		</section>
+
+		<div  class="darRegalos">
+			
+			<div data-aos="fade-up"data-aos-duration="2200" class="regalos">
+               <h3 class="h3-2">
+				¿Queres hacernos un regalo?
+			   </h3>
+			   <img class="icono4" src="https://img.icons8.com/ios-filled/50/000000/gift--v2.png"/>
+			   <div class="cuentaBancaria">
+				  <p class="infoP">
+					¡Tenemos la casa armada! Pueden colocar dinero en el salon o hacer transferencia.
+					<br>
+					¡Muchas gracias!
+					<br>
+					<span class="VerDatos" ><a class="VerDatos1" href="./datosBancarios/Datos bancarios.docx" download="DatosBancarios">Ver datos bancarios</a></span>
+					<br>
+					 
+					</p>
+				  
+				</div>
+				
+			</div>
+			
+			
+			
+		</div>
+
+		<div  class="confirmarAsistencia">
+			
+           <div  class="Asistencia">
+                <h3>¡Te esperamos!</h3>
+		     </div>
+		      <div  class="contenedor-info">
+               <p class="pAsistencia"> Por favor confirmar tu asistencia hasta el 10 de febrero haciendo click en el boton</p>
+			   
+		     </div>
+		   
+				 <div  class="contenedor-wpp">
+					 <div class="contenido-caja">
+						<button class="wppAsistencia" ><a href="https://api.whatsapp.com/send?phone=+54 388 506 3645&text=Hola Andre y Cris, confirmamos la asistencia a su casamiento." target="_blank" rel="noopener noreferrer">Confirmar tu asistencia</a></button>
+					 </div>
+					
+				</div>
+				 
+			</div>
+		</div>
+
+
+		<div class="fondoPintura">
+			<img class="img3" src="img/festival.png" alt="">
+		</div>
+
+        
+			
+   
+	</main>
+	   <script type="text/javascript" src="script.js"></script>
+       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <script>
+ AOS.init();
+ </script>
+</body>
+
+</html>
